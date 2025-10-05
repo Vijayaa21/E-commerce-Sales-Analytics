@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.title("📊 E-commerce Sales Analytics Dashboard")
 
 # Load dataset
-df = pd.read_csv("data/ecommerce_sales_sample.csv")
+df = pd.read_csv("ecommerce_sales_sample.csv")
 df["Order Date"] = pd.to_datetime(df["Order Date"])
 df["Month"] = df["Order Date"].dt.month
 df["AgeGroup"] = pd.cut(df["Customer Age"], bins=[18,25,35,50,70], labels=["18-25","26-35","36-50","51+"])
